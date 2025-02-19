@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Natural Platter</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Family -->
+    <script
+      src="https://kit.fontawesome.com/72e858c335.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind Customize class -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              soraFont: ["Sora", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-soraFont">
+    <!-- Header -->
+    <header class="bg-gradient-to-t from-[#EFEBE3]">
+      <div class="w-10/12 md:w-11/12 mx-auto">
+        <div class="border-b border-b-green-900 md:border-none">
+          <div class="navbar">
+            <div class="navbar-start">
+              <a class=""
+                ><img
+                  src="c2-assets/logo-header.png"
+                  alt="natural platter logo"
+              /></a>
+            </div>
+            <div class="navbar-center hidden md:flex">
+              <ul class="menu menu-horizontal px-1 font-soraFont text-black">
+                <li><a>Product</a></li>
+                <li><a>Services</a></li>
+                <li><a>Contact us</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <svg
+                class="mr-5 hidden md:inline-block"
+                width="24.019653"
+                height="24.019722"
+                viewBox="0 0 24.0197 24.0197"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <desc>Created with Pixso.</desc>
+                <defs />
+                <path
+                  id="Vector"
+                  d="M23.73 22.32L17.77 16.35C19.39 14.36 20.19 11.82 20 9.26C19.81 6.7 18.64 4.31 16.73 2.58C14.83 0.86 12.33 -0.07 9.76 0C7.19 0.06 4.75 1.11 2.93 2.93C1.11 4.75 0.06 7.19 0 9.76C-0.07 12.33 0.86 14.83 2.58 16.73C4.31 18.64 6.7 19.81 9.26 20C11.82 20.19 14.36 19.39 16.35 17.77L22.32 23.73C22.51 23.92 22.76 24.02 23.02 24.01C23.29 24.01 23.54 23.91 23.72 23.72C23.91 23.54 24.01 23.29 24.01 23.02C24.02 22.76 23.92 22.51 23.73 22.32ZM10.03 18.03C8.44 18.03 6.9 17.56 5.58 16.68C4.27 15.8 3.24 14.55 2.64 13.09C2.03 11.63 1.87 10.02 2.18 8.47C2.49 6.91 3.25 5.49 4.37 4.37C5.49 3.25 6.91 2.49 8.47 2.18C10.02 1.87 11.63 2.03 13.09 2.64C14.55 3.24 15.8 4.27 16.68 5.58C17.56 6.9 18.03 8.44 18.03 10.03C18.02 12.15 17.18 14.18 15.68 15.68C14.18 17.18 12.15 18.02 10.03 18.03Z"
+                  fill="#000000"
+                  fill-opacity="1.000000"
+                  fill-rule="nonzero"
+                />
+              </svg>
+
+              <svg
+                class="mr-5 hidden md:inline-block"
+                width="28.015625"
+                height="24.000004"
+                viewBox="0 0 28.0156 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <desc>Created with Pixso.</desc>
+                <defs />
+                <path
+                  id="Vector"
+                  d="M26.68 1.09L27.47 1.09C27.77 1.09 28.01 0.84 28.01 0.54C28.01 0.24 27.77 0 27.47 0L24.06 0C23.83 0 23.62 0.14 23.54 0.35L22.2 4.02L2.72 4.02C1 4.02 -0.29 5.6 0.05 7.29L1.22 13.08C1.45 14.23 2.39 15.1 3.55 15.25L4.72 15.41L6.34 15.63L5.88 14.05L5.42 12.47C5.02 11.07 6.06 9.68 7.52 9.68L21.29 9.68L22.81 5.52L23.09 4.77C23.09 4.76 23.09 4.75 23.1 4.74L24.29 1.5L24.3 1.46L24.44 1.09L26.68 1.09ZM21.21 5.52L20.24 8.18L7.52 8.18Q7.03 8.18 6.58 8.3Q6.19 8.4 5.83 8.58Q5.48 8.77 5.18 9.01Q4.84 9.29 4.57 9.65Q4.31 10 4.13 10.4Q3.98 10.76 3.9 11.15Q3.83 11.55 3.84 11.95Q3.85 12.42 3.98 12.89L4.26 13.83L3.76 13.76Q3.51 13.73 3.31 13.62Q3.17 13.55 3.06 13.44Q2.91 13.31 2.82 13.14Q2.73 12.98 2.69 12.79L1.52 6.99Q1.48 6.81 1.5 6.63Q1.51 6.54 1.53 6.44Q1.56 6.34 1.61 6.24Q1.67 6.1 1.77 5.97Q1.87 5.85 2 5.76Q2.09 5.69 2.19 5.64Q2.28 5.6 2.37 5.57Q2.54 5.52 2.72 5.52L21.21 5.52Z"
+                  fill="#111111"
+                  fill-opacity="1.000000"
+                  fill-rule="evenodd"
+                />
+                <path
+                  id="Vector"
+                  d="M3.26 19.68C2.27 19.88 1.52 20.76 1.52 21.81C1.52 23.02 2.5 24 3.7 24C4.77 24 5.65 23.23 5.85 22.22C5.87 22.09 5.88 21.95 5.88 21.81C5.88 21.58 5.85 21.35 5.78 21.13C5.73 20.99 5.67 20.85 5.59 20.72L15.97 20.72C15.89 20.85 15.83 20.99 15.79 21.13C15.72 21.35 15.68 21.58 15.68 21.81C15.68 21.95 15.69 22.09 15.72 22.22C15.91 23.23 16.79 24 17.86 24C18.92 24 19.81 23.23 20 22.22C20.03 22.09 20.04 21.95 20.04 21.81C20.04 21.58 20 21.35 19.93 21.13C19.88 20.99 19.82 20.85 19.75 20.72L20.81 20.72C21 20.72 21.18 20.69 21.35 20.64C22.5 20.25 22.89 18.64 21.82 17.8L20.34 16.63L20.18 16.51C20.1 16.45 20.01 16.41 19.92 16.39L18.88 16.25L19.02 15.86L19.41 14.81L20.34 12.27L20.89 10.77L7.52 10.77C6.79 10.77 6.27 11.47 6.47 12.16L7.53 15.79L16.97 17.09L18.05 17.24C18.05 17.24 18.06 17.24 18.07 17.24L19.62 17.45L20.48 18.13L20.53 18.17L21.14 18.66C21.55 18.98 21.32 19.63 20.81 19.63L3.7 19.63C3.55 19.63 3.4 19.65 3.26 19.68ZM17.46 21.13L18.25 21.13L18.45 21.47Q18.49 21.54 18.51 21.61Q18.54 21.71 18.54 21.81Q18.54 21.95 18.49 22.07Q18.44 22.2 18.34 22.3Q18.24 22.4 18.12 22.45Q18 22.5 17.86 22.5Q17.72 22.5 17.6 22.45Q17.48 22.4 17.38 22.3Q17.28 22.2 17.23 22.07Q17.18 21.95 17.18 21.81Q17.18 21.71 17.21 21.62Q17.23 21.54 17.27 21.47L17.46 21.13ZM17.5 15.65L18.74 12.27L8.06 12.27L8.69 14.44L17.5 15.65ZM4.1 21.13L3.7 21.13Q3.56 21.13 3.44 21.18Q3.32 21.23 3.22 21.33Q3.12 21.43 3.07 21.55Q3.02 21.67 3.02 21.81Q3.02 21.95 3.07 22.07Q3.12 22.2 3.22 22.3Q3.32 22.4 3.44 22.45Q3.56 22.5 3.7 22.5Q3.84 22.5 3.96 22.45Q4.08 22.4 4.18 22.3Q4.28 22.2 4.33 22.07Q4.38 21.95 4.38 21.81Q4.38 21.71 4.36 21.62Q4.33 21.54 4.29 21.47L4.1 21.13Z"
+                  fill="#111111"
+                  fill-opacity="1.000000"
+                  fill-rule="evenodd"
+                />
+              </svg>
+
+              <a
+                class="border-2 border-green-600 font-soraFont px-5 py-2 mr-3 rounded-lg hidden md:inline-block"
+                >Login</a
+              >
+              <a
+                class="bg-btnPrimary bg-[#179800] px-5 py-2 rounded-lg font-soraFont text-white hidden md:inline-block"
+                >Register</a
+              >
+
+              <div class="dropdown">
+                <div tabindex="0" class="md:hidden">
+                  <svg
+                    width="22.500000"
+                    height="15.000000"
+                    viewBox="0 0 22.5 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <desc>Created with Pixso.</desc>
+                    <defs />
+                    <path
+                      id="Vector (Stroke)"
+                      d="M0 0.93C0 0.41 0.41 0 0.93 0L21.56 0C22.08 0 22.5 0.41 22.5 0.93C22.5 1.45 22.08 1.87 21.56 1.87L0.93 1.87C0.41 1.87 0 1.45 0 0.93ZM0 7.5C0 6.98 0.41 6.56 0.93 6.56L21.56 6.56C22.08 6.56 22.5 6.98 22.5 7.5C22.5 8.01 22.08 8.43 21.56 8.43L0.93 8.43C0.41 8.43 0 8.01 0 7.5ZM0 14.06C0 13.54 0.41 13.12 0.93 13.12L21.56 13.12C22.08 13.12 22.5 13.54 22.5 14.06C22.5 14.58 22.08 15 21.56 15L0.93 15C0.41 15 0 14.58 0 14.06Z"
+                      fill="#111111"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow font-soraFont right-0 bg-white text-black"
+                >
+                  <li><a>Product</a></li>
+                  <li><a>Services</a></li>
+                  <li><a>Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Banner Section -->
+      <section>
+        <div class="w-10/12 md:w-11/12 mx-auto">
+          <!-- Banner Header -->
+          <div class="text-center">
+            <h1 class="text-2xl md:text-4xl font-semibold">
+              Freshness
+              <span class="text-green-700"
+                >You Can <br />
+                Count</span
+              >
+              On, Prices You’ll Love!
+            </h1>
+            <p class="text-gray-600 pt-5">
+              Shop your daily essentials at unbeatable prices. From fresh
+              produce to pantry <br />
+              staples, we’ve got you covered every day!
+            </p>
+          </div>
+          <!-- Banner Image -->
+          <div>
+            <img class="mx-auto" src="c2-assets/hero-vegetables.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Service Card Section -->
+      <section class="my-24">
+        <div class="w-10/12 md:w-11/12 mx-auto">
+          <h1 class="text-green-600 text-2xl font-bold md:pl-14">Services</h1>
+          <!-- All Card -->
+          <div class="mt-10 grid gap-6 grid-cols-1 md:grid-cols-3">
+            <!-- Card 1 -->
+            <div class="card bg-[#EFEBE3] w-80 mx-auto">
+              <div class="avatar mx-auto pt-8">
+                <div class="w-24 rounded-full bg-white">
+                  <img class="p-3" src="c2-assets/service.png" />
+                </div>
+              </div>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">24/7 Services</h2>
+                <p class="text-gray-500 text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card bg-[#EFEBE3] w-80 mx-auto">
+              <div class="avatar mx-auto pt-8">
+                <div class="w-24 rounded-full bg-white">
+                  <img class="p-3" src="c2-assets/delivery.png" />
+                </div>
+              </div>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Fast Delivery</h2>
+                <p class="text-gray-500 text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card bg-[#EFEBE3] w-80 mx-auto">
+              <div class="avatar mx-auto pt-8">
+                <div class="w-24 rounded-full bg-white">
+                  <img class="p-3" src="c2-assets/healthy.png" />
+                </div>
+              </div>
+              <div class="card-body items-center text-center">
+                <h2 class="card-title">Healthy Products</h2>
+                <p class="text-gray-500 text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Popular Products Section -->
+      <section class="my-24 bg-[#EFEBE3]">
+        <div class="w-10/12 md:w-11/12 mx-auto">
+          <h1 class="text-green-600 text-2xl font-bold pt-20 md:pt-16">
+            Popular Products
+          </h1>
+          <!-- Main Div -->
+          <div class="pt-5 pb-24 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Left Side Div -->
+            <div class="bg-[#54c51f] rounded-lg h-80 relative">
+              <!-- Contents Div -->
+              <div class="">
+                <h1 class="pt-8 pl-5 text-2xl text-white font-semibold">
+                  30% off
+                </h1>
+                <p class="pt-2 pl-5 text-slate-700">
+                  Discover a world of treats, toys, and <br />
+                  essentials handpicked for
+                </p>
+                <button class="py-2 px-4 mt-2 ml-5 bg-white rounded-lg">
+                  Buy Now
+                </button>
+              </div>
+              <!-- image Div -->
+              <div class="absolute right-0 bottom-0">
+                <img
+                  class="h-48"
+                  src="c2-assets/vegetable-offer.png"
+                  alt="vegetable Picture"
+                />
+              </div>
+            </div>
+            <!-- Right Side Div -->
+            <div class="grid gap-4 grid-cols-2 md:grid-cols-3 md:col-span-2">
+              <!-- Short Div 1 -->
+              <div class="bg-white flex rounded-lg">
+                <div class="bg-[#EFEBE3] my-auto mx-3 rounded-xl">
+                  <img src="c2-assets/onion.png" alt="" />
+                </div>
+
+                <div class="my-auto">
+                  <h1 class="text-sm">
+                    <i class="fa-solid fa-star text-yellow-500"></i> 4.5
+                  </h1>
+                  <p class="font-semibold">Onion 1 KG</p>
+                  <small class="font-semibold">39.99</small>
+                </div>
+              </div>
+              <!-- Short Div 2 -->
+              <div class="bg-white flex rounded-lg">
+                <div class="bg-[#EFEBE3] my-auto mx-3 rounded-xl">
+                  <img src="c2-assets/tomato.png" alt="" />
+                </div>
+
+                <div class="my-auto">
+                  <h1 class="text-sm">
+                    <i class="fa-solid fa-star text-yellow-500"></i> 4.5
+                  </h1>
+                  <p class="font-semibold">Tomato 500 g</p>
+                  <small class="font-semibold">39.99</small>
+                </div>
+              </div>
+              <!-- Short Div 3 -->
+              <div class="bg-white flex rounded-lg">
+                <div class="bg-[#EFEBE3] my-auto mx-3 rounded-xl">
+                  <img src="c2-assets/potato.png" alt="" />
+                </div>
+
+                <div class="my-auto">
+                  <h1 class="text-sm">
+                    <i class="fa-solid fa-star text-yellow-500"></i> 4.5
+                  </h1>
+                  <p class="font-semibold">Potato 1 KG</p>
+                  <small class="font-semibold">39.99</small>
+                </div>
+              </div>
+              <!-- Short Div 4 -->
+              <div class="bg-white flex rounded-lg">
+                <div class="bg-[#EFEBE3] my-auto mx-3 rounded-xl">
+                  <img src="c2-assets/tomato.png" alt="" />
+                </div>
+
+                <div class="my-auto">
+                  <h1 class="text-sm">
+                    <i class="fa-solid fa-star text-yellow-500"></i> 4.5
+                  </h1>
+                  <p class="font-semibold">Tomato 500 g</p>
+                  <small class="font-semibold">39.99</small>
+                </div>
+              </div>
+              <!-- Short Div 5 -->
+              <div class="bg-white flex rounded-lg">
+                <div class="bg-[#EFEBE3] my-auto mx-3 rounded-xl">
+                  <img src="c2-assets/onion.png" alt="" />
+                </div>
+
+                <div class="my-auto">
+                  <h1 class="text-sm">
+                    <i class="fa-solid fa-star text-yellow-500"></i> 4.5
+                  </h1>
+                  <p class="font-semibold">Onion 1 KG</p>
+                  <small class="font-semibold">39.99</small>
+                </div>
+              </div>
+              <!-- Short Div 6 -->
+              <div class="bg-white flex rounded-lg">
+                <div class="bg-[#EFEBE3] my-auto mx-3 rounded-xl">
+                  <img src="c2-assets/tomato.png" alt="" />
+                </div>
+
+                <div class="my-auto">
+                  <h1 class="text-sm">
+                    <i class="fa-solid fa-star text-yellow-500"></i> 4.5
+                  </h1>
+                  <p class="font-semibold">Tomato 500 g</p>
+                  <small class="font-semibold">39.99</small>
+                </div>
+              </div>
+              <!-- Short Div 7 -->
+              <div class="bg-white flex rounded-lg">
+                <div class="bg-[#EFEBE3] my-auto mx-3 rounded-xl">
+                  <img src="c2-assets/onion.png" alt="" />
+                </div>
+
+                <div class="my-auto">
+                  <h1 class="text-sm">
+                    <i class="fa-solid fa-star text-yellow-500"></i> 4.5
+                  </h1>
+                  <p class="font-semibold">Onion 1 KG</p>
+                  <small class="font-semibold">39.99</small>
+                </div>
+              </div>
+              <!-- Short Div 8 -->
+              <div class="bg-white flex rounded-lg">
+                <div class="bg-[#EFEBE3] my-auto mx-3 rounded-xl">
+                  <img src="c2-assets/potato.png" alt="" />
+                </div>
+
+                <div class="my-auto">
+                  <h1 class="text-sm">
+                    <i class="fa-solid fa-star text-yellow-500"></i> 4.5
+                  </h1>
+                  <p class="font-semibold">Potato 1 KG</p>
+                  <small class="font-semibold">39.99</small>
+                </div>
+              </div>
+              <!-- Short Div 9 -->
+              <div class="bg-white md:flex rounded-lg hidden">
+                <div class="bg-[#EFEBE3] my-auto mx-3 rounded-xl">
+                  <img src="c2-assets/potato.png" alt="" />
+                </div>
+
+                <div class="my-auto">
+                  <h1 class="text-sm">
+                    <i class="fa-solid fa-star text-yellow-500"></i> 4.5
+                  </h1>
+                  <p class="font-semibold">Potato 1 KG</p>
+                  <small class="font-semibold">39.99</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Arrival & Offers Section-->
+      <section class="my-24">
+        <div class="w-10/12 md:w-11/12 mx-auto">
+          <h1 class="text-green-600 text-2xl font-bold pt-20 md:pt-16">
+            Arrival & Offers
+          </h1>
+          <!-- Main div -->
+          <div class="pt-5 flex flex-col md:flex-row gap-10">
+            <!-- Left Div -->
+            <div
+              class="bg-[#115414] rounded-lg flex items-center justify-between md:flex-1"
+            >
+              <!-- Contents Div -->
+              <div class="md:ml-16">
+                <img src="c2-assets/dawat-logo.png" alt="" />
+                <button
+                  class="py-2 px-1 md:px-10 mt-2 ml-5 bg-[#63B76D] rounded-lg text-xs md:text-base"
+                >
+                  Cook Exotic Dishes
+                </button>
+                <h1 class="pt-3 pl-5 md:text-2xl text-white font-semibold">
+                  UP to 20% OFF
+                </h1>
+              </div>
+              <!-- image Div -->
+              <div>
+                <img
+                  class="md:h-60"
+                  src="c2-assets/dawat-mock-up.png"
+                  alt="vegetable Picture"
+                />
+              </div>
+            </div>
+            <!-- Right Div -->
+            <div class="bg-[#102861] rounded-lg flex justify-between">
+              <!-- Contents Div -->
+              <div class="md:ml-2">
+                <img src="c2-assets/india-gate-logo.png" alt="" />
+                <button
+                  class="py-2 px-1 md:px-10 mt-2 ml-2 bg-[#2A4D97] rounded-lg text-xs md:text-base"
+                >
+                  World’s No.1 Rice
+                </button>
+                <h1 class="pt-3 pl-2 md:text-2xl text-white font-semibold">
+                  UP to 40% OFF
+                </h1>
+              </div>
+              <!-- image Div -->
+              <div class="my-auto mr-5">
+                <img
+                  class="w-28 md:w-full"
+                  src="c2-assets/india-gate-mock-up.png"
+                  alt="vegetable Picture"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#179800] font-soraFont mt-64">
+      <!-- Subscription Box: Now Responsive -->
+      <div
+        class="text-black relative -top-52 lg:-top-40 w-10/12 mx-auto bg-[#EFEBE3] shadow-lg rounded-xl p-10 flex flex-col lg:flex-row gap-20 text-center lg:justify-center lg:text-left"
+      >
+        <!-- Left Div: Image -->
+        <div class="flex justify-center">
+          <img
+            src="c2-assets/vegetable-busket.png"
+            alt="Cute Dog"
+            class="w-28 h-auto lg:w-60"
+          />
+        </div>
+
+        <!-- Right Div: Subscription Text & Form -->
+        <div class="flex flex-col my-auto">
+          <h1 class="text-2xl font-bold">Get Grocery News!</h1>
+          <p class="mt-3">
+            Exclusive training tips, ticks, product deals and more.
+          </p>
+          <input
+            type="email"
+            placeholder="Enter email..."
+            class="mt-3 p-2 border rounded w-full"
+          /><br />
+          <a
+            class="bg-[#179800] w-40 px-5 py-2 rounded-lg text-center mx-auto lg:mx-0 text-white"
+            >Subscribe</a
+          >
+        </div>
+      </div>
+      <!-- Footer Content -->
+      <div
+        class="w-10/12 mx-auto pb-20 flex flex-col lg:flex-row lg:justify-between text-white"
+      >
+        <nav class="lg:text-left mb-6 lg:mb-0">
+          <div class="flex lg:justify-start items-center mb-3">
+            <img src="c2-assets/logo-footer.png" alt="Logo" />
+          </div>
+          <p class="text-sm">
+            Discover a world of treats, toys, and <br />
+            essentials handpicked for your furry <br />
+            friends.
+          </p>
+        </nav>
+
+        <nav class="lg:text-left mb-6 lg:mb-0">
+          <div class="flex flex-col space-y-2">
+            <a href="#" class="hover:underline">Product</a>
+            <a href="#" class="hover:underline">Services</a>
+            <a href="#" class="hover:underline">Contact us</a>
+          </div>
+        </nav>
+
+        <nav>
+          <h6 class="footer-title">Follow Us</h6>
+          <div class="grid grid-flow-col gap-4">
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
